@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECUREX | Courses</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="logo-mark">S</div>
+                <div>
+                    <h1>SECUREX</h1>
+                    <p>Platform Security E-Learning</p>
+                </div>
+            </div>
+            <nav>
+                <a class="nav-link" href="index.html">🏠 Dashboard</a>
+                <a class="nav-link active" href="courses.html">📚 Courses</a>
+                <a class="nav-link" href="tutorials.html">🎥 Tutorials</a>
+                <a class="nav-link" href="quizzes.html">📝 Quizzes</a>
+                <a class="nav-link" href="library.html">📖 Library</a>
+                <a class="nav-link" href="recents.html">🕘 Recents</a>
+            </nav>
+        </aside>
+
+        <div class="main">
+            <header class="topbar">
+                <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+                <div class="search-box">
+                    <input id="searchInput" type="text" placeholder="Search courses, tutorials, or security topics...">
+                </div>
+            </header>
+
+            <main class="page">
+                <section class="hero reveal">
+                    <span class="floating-shape shape-1"></span>
+                    <span class="floating-shape shape-2"></span>
+                    <div>
+                        <p class="tagline">SECUREX Courses</p>
+                        <h2>Explore Our Courses</h2>
+                        <p>Build your understanding of platform security step by step.</p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#course-01">Choose a Course</a>
+                            <a class="btn btn-secondary" href="tutorials.html">Watch Tutorials</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="card-grid">
+                        <article class="course-card search-item reveal" id="course-01">
+                            <div class="course-image">
+                                <img src="images/course1.webp" alt="Course 01: Introduction to Platform Security">
+                            </div>
+                            <span class="card-label">Course 01</span>
+                            <h3>Introduction to Platform Security</h3>
+                            <ul class="course-topics">
+                                <li>What <span class="highlight">Platform Security</span> is</li>
+                                <li>Why it matters</li>
+                                <li>Basic security concepts</li>
+                                <li>Computing platforms</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Introduction to Platform Security" data-link="courses.html#course-01">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>A computing platform is the combination of hardware, firmware, operating system, applications, users, and networks. <span class="highlight">Platform Security</span> means protecting that whole stack, not only one application.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-02">
+                            <div class="course-image">
+                                <img src="images/course2.webp" alt="Course 02: Computing Platform Layers">
+                            </div>
+                            <span class="card-label">Course 02</span>
+                            <h3>Computing Platform Layers</h3>
+                            <ul class="course-topics">
+                                <li><span class="highlight">Hardware</span></li>
+                                <li>Firmware</li>
+                                <li>Operating System</li>
+                                <li>Applications</li>
+                                <li>Users</li>
+                                <li>Network</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Computing Platform Layers" data-link="courses.html#course-02">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>Each layer depends on the layer below it. If hardware or the OS is weak, applications on top are also at risk. Students should always think in layers.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-03">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Course 03: Attack Surfaces">
+                            </div>
+                            <span class="card-label">Course 03</span>
+                            <h3>Attack Surfaces</h3>
+                            <ul class="course-topics">
+                                <li>What an <span class="highlight">Attack Surface</span> is</li>
+                                <li>Hardware attack surfaces</li>
+                                <li>Software attack surfaces</li>
+                                <li>Network attack surfaces</li>
+                                <li>Human attack surfaces</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Attack Surfaces" data-link="courses.html#course-03">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>An <span class="highlight">Attack Surface</span> is every place an attacker might try to enter or abuse a system. Smaller surfaces are easier to protect.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-04">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Course 04: Hardware-Based Security">
+                            </div>
+                            <span class="card-label">Course 04</span>
+                            <h3>Hardware-Based Security</h3>
+                            <ul class="course-topics">
+                                <li><span class="highlight">TPM</span></li>
+                                <li><span class="highlight">Secure Boot</span></li>
+                                <li>Hardware Root of Trust</li>
+                                <li>Trusted Computing</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Hardware Security" data-link="courses.html#course-04">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>A <span class="highlight">TPM</span> stores keys and measurements. <span class="highlight">Secure Boot</span> checks that startup software is trusted before the operating system loads.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-05">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80" alt="Course 05: Software Security">
+                            </div>
+                            <span class="card-label">Course 05</span>
+                            <h3>Software Security</h3>
+                            <ul class="course-topics">
+                                <li>Operating system security</li>
+                                <li>Application security</li>
+                                <li>Authentication</li>
+                                <li>Authorization</li>
+                                <li>Updates</li>
+                                <li>Secure configuration</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Software Security" data-link="courses.html#course-05">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p><span class="highlight">Software</span> must prove who a user is (authentication) and then allow only permitted actions (authorization). Updates close known holes.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-06">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=900&q=80" alt="Course 06: Virtualization Architecture">
+                            </div>
+                            <span class="card-label">Course 06</span>
+                            <h3>Virtualization Architecture</h3>
+                            <ul class="course-topics">
+                                <li><span class="highlight">Virtual Machine</span></li>
+                                <li><span class="highlight">Hypervisor</span></li>
+                                <li>Host OS</li>
+                                <li>Guest OS</li>
+                                <li>Virtual hardware</li>
+                                <li>Resource allocation</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Virtualization Architecture" data-link="courses.html#course-06">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>A <span class="highlight">Hypervisor</span> creates virtual hardware so each <span class="highlight">Virtual Machine</span> can run its own guest operating system on shared physical hardware.</p>
+                            </div>
+                        </article>
+
+                        <article class="course-card search-item reveal" id="course-07">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Course 07: Virtualization Security">
+                            </div>
+                            <span class="card-label">Course 07</span>
+                            <h3>Virtualization Security</h3>
+                            <ul class="course-topics">
+                                <li>VM isolation</li>
+                                <li>Hypervisor security</li>
+                                <li>VM escape concept</li>
+                                <li>Secure configuration</li>
+                                <li>Monitoring</li>
+                                <li>Updates</li>
+                            </ul>
+                            <button class="btn btn-accent open-lesson" type="button" data-title="Virtualization Security" data-link="courses.html#course-07">Open Lesson</button>
+                            <div class="lesson-panel">
+                                <p>VMs should stay isolated. VM escape is the idea that malware in a guest might try to break out to the host. Updates, monitoring, and a hardened hypervisor reduce that risk.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section reveal">
+                    <h2>Hardware and Software Explanations</h2>
+                    <p class="section-subtitle">These two ideas appear in almost every platform security lesson.</p>
+
+                    <div class="two-col">
+                        <article class="info-card">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Computer Hardware">
+                            </div>
+                            <h3>Hardware</h3>
+                            <p><span class="highlight">Hardware</span> refers to the physical components of a computer or computing platform that can be physically touched.</p>
+                            <p>Examples: CPU, RAM, Motherboard, Storage, Network Interface Card, and Input/Output devices.</p>
+                            <p>Hardware provides the physical foundation where software and operating systems run.</p>
+                        </article>
+
+                        <article class="info-card">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Computer Software">
+                            </div>
+                            <h3>Software</h3>
+                            <p><span class="highlight">Software</span> refers to programs and instructions that tell computer hardware what to do.</p>
+                            <p>Examples: Operating Systems, Applications, Drivers, Utilities, and Security Software.</p>
+                            <p>Software controls and uses hardware resources to perform tasks.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section reveal">
+                    <h2>Hardware vs Software</h2>
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Hardware</th>
+                                <th>Software</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Physical</td><td>Digital</td></tr>
+                            <tr><td>Can be touched</td><td>Cannot be physically touched</td></tr>
+                            <tr><td>CPU</td><td>Operating System</td></tr>
+                            <tr><td>RAM</td><td>Applications</td></tr>
+                            <tr><td>Storage Device</td><td>Security Software</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
